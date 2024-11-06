@@ -1,0 +1,26 @@
+----------Experiment 1 - resnet18-----------
+transformations == Compose(
+    Resize(size=(300, 300), interpolation=bilinear, max_size=None, antialias=True)
+    RandomChoice(
+    ColorJitter(brightness=(0.8, 1.2), contrast=None, saturation=None, hue=None)
+    RandomGrayscale(p=0.25)
+)(p=None)
+    RandomHorizontalFlip(p=0.25)
+    RandomRotation(degrees=[-25.0, 25.0], interpolation=nearest, expand=False, fill=0)
+    ToTensor()
+    Normalize(mean=[0.457342265910642, 0.4387686270106377, 0.4073427106250871], std=[0.26753769276329037, 0.2638145880487105, 0.2776826934044154])
+)
+Epoch 1 >>train_loss: 0.3348, train_avg_precision:0.994, val_loss: 2.4350, val_avg_precision:0.877
+saving best weights...
+Epoch 2 >>train_loss: 0.4074, train_avg_precision:0.990, val_loss: 2.5842, val_avg_precision:0.863
+Epoch 3 >>train_loss: 0.3241, train_avg_precision:0.994, val_loss: 2.6939, val_avg_precision:0.871
+Epoch 4 >>train_loss: 0.3053, train_avg_precision:0.995, val_loss: 2.3985, val_avg_precision:0.877
+saving best weights...
+Epoch 5 >>train_loss: 0.2670, train_avg_precision:0.994, val_loss: 2.5440, val_avg_precision:0.872
+Epoch 6 >>train_loss: 0.1978, train_avg_precision:0.996, val_loss: 2.5173, val_avg_precision:0.877
+Epoch 7 >>train_loss: 0.1763, train_avg_precision:0.999, val_loss: 2.4006, val_avg_precision:0.882
+saving best weights...
+Epoch 8 >>train_loss: 0.1496, train_avg_precision:0.999, val_loss: 2.4164, val_avg_precision:0.883
+saving best weights...
+Epoch 9 >>train_loss: 0.1275, train_avg_precision:0.999, val_loss: 2.4199, val_avg_precision:0.881
+Epoch 10 >>train_loss: 0.1168, train_avg_precision:1.000, val_loss: 2.4606, val_avg_precision:0.880
